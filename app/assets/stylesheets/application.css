@@ -45,6 +45,23 @@ body {
   border-radius:         6px;
 }
 
+.content .span8,
+.content .span4 {
+  min-height: 200px;
+}
+
+/* Give a quick and non-cross-browser friendly divider */
+.content .span4 {
+  margin-left: 0;
+  padding-left: 19px;
+  border-left: 1px solid #eee;
+}
+
+img.gravatar {
+  border: 1px solid #999;
+  margin-bottom: -15px;
+}
+
 footer {
   padding-top: 0;
 }

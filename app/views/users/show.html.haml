@@ -1,5 +1,13 @@
-.page-header
-  %h2
-    = @user.name 
-  %h3
-    = @user.email
+.row
+  .span8
+    %h1
+      = gravatar_for @user, :size => 50
+      = @user.name
+
+  .span4
+    %strong Name
+    = @user.name
+    %br
+    %strong URL
+    = link_to user_path(@user), @user
+    

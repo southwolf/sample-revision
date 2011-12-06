@@ -11,6 +11,8 @@ gem 'rails-i18n'
 
 gem 'heroku'
 
+gem 'gravatar_image_tag'
+
 group :development,:test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
