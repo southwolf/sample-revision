@@ -1,0 +1,16 @@
+.bundle
+tmp/
+db/*.sqlite3
+tmp/
+log/*.log
+log/*.log*
+tmp/**/*
+.sass-cache/
+public/assets/
+.redcar
+.DS_Store
+*.swp
+*.swo
+.rvmrc
+vendor/ruby
+doc/
