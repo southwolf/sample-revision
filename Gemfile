@@ -9,6 +9,8 @@ gem 'bson_ext'
 # I18n
 gem 'rails-i18n'
 
+gem 'heroku'
+
 group :development,:test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
