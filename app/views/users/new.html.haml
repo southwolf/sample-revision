@@ -1,0 +1,15 @@
+.page-header
+  %h1 Sign up
+= simple_form_for @user, :wrapper => :inline do |f|
+  - if f.error_notification
+    .alert-message.warning.fade.in{"data-alert" =>"alert"}
+      %a.close{ :href => "#" } ×
+      %p
+        = f.error_notification
+  .inputs
+    = f.input :name
+    = f.input :email
+    = f.input :password
+    = f.input :password_confirmation, {:label => "Confirmation" }
+  .actions
+    = f.submit "Sign up", :class => 'btn primary'

@@ -23,8 +23,8 @@ body {
 }
 
 .content {
-  padding: 20px;
-  margin: 0 -20px;
+  padding:20px;  
+  margin: 0 0 20px 0;
 	background:#fff;
 }
 
@@ -45,13 +45,10 @@ body {
   border-radius:         6px;
 }
 
-.content .span8,
-.content .span4 {
-  min-height: 200px;
-}
+.alert-message { margin-bottom:8px;}
 
 /* Give a quick and non-cross-browser friendly divider */
-.content .span4 {
+.content .span3 {
   margin-left: 0;
   padding-left: 19px;
   border-left: 1px solid #eee;
@@ -60,6 +57,10 @@ body {
 img.gravatar {
   border: 1px solid #999;
   margin-bottom: -15px;
+}
+
+div.field, div.actions {
+  margin-bottom: 10px;
 }
 
 footer {
