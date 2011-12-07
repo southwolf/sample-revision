@@ -19,6 +19,9 @@ guard 'rspec', :version => 2, :cli => '--drb' do
   watch('spec/spec_helper.rb')  { "spec" }
 
   # Rails example
+  watch('app/helpers/application_helper.rb')
+  watch(%r{^app/helpers/(.+)_(helper)\.rb$})          { |m| ["spec/requests/#{m[1]}_spec.rb", "spec/controllers/#{m[1]}_controller_spec.rb"] }
+  watch(%r{^spec/support/.+\.rb$})  
   watch(%r{^spec/.+_spec\.rb$})
   watch(%r{^app/(.+)\.rb$})                           { |m| "spec/#{m[1]}_spec.rb" }
   watch(%r{^app/(.*)(\.erb|\.haml)$})                 { |m| "spec/#{m[1]}#{m[2]}_spec.rb" }
@@ -29,7 +32,8 @@ guard 'rspec', :version => 2, :cli => '--drb' do
   watch('config/routes.rb')                           { "spec/routing" }
   watch('app/controllers/application_controller.rb')  { "spec/controllers" }
   # Capybara request specs
-  watch(%r{^app/views/(.+)/.*\.(erb|haml)$})          { |m| "spec/requests/#{m[1]}_spec.rb" }
+  watch(%r{^app/views/(.+)/.*\.(erb|haml)$})          { |m| "spec/requests/#{m[1]}_spec.rb" }  
+
 end
 
 

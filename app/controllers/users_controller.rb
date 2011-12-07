@@ -7,6 +7,7 @@ class UsersController < ApplicationController
   def new
     @user = User.new
     @title = "Sign up"
+    drop_breadcrumb("Sign up")
   end
 
   def create
@@ -15,7 +16,8 @@ class UsersController < ApplicationController
       flash[:success] = "Welcome to the Sample App!"
       redirect_to @user
     else
-      @title = "Sign up"
+      @title = "Sign up"      
+      drop_breadcrumb("Sign up")
       render :new
     end
   end

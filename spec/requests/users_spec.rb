@@ -13,7 +13,7 @@ describe "Users" do
           fill_in "Password",     :with => ""
           fill_in "Confirmation", :with => ""
           click_button "Sign up"
-          page.should have_selector("h1", :content => "Sign up")
+          page.should have_selector("legend", :content => "Sign up")
           page.should have_selector("p.error_notification")
         end.should_not change(User, :count)
       end

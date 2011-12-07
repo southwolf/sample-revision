@@ -1,15 +1,14 @@
-= simple_form_for @user, :wrapper => :inline do |f|
+= simple_form_for :session, :url => sessions_path, :wrapper => :inline do |f|
   - if f.error_notification
     .alert-message.warning.fade.in{"data-alert" =>"alert"}
       %a.close{ :href => "#" } ×
       %p
         = f.error_notification
   %fieldset
-    %legend Sign up
+    %legend Sign in
     .inputs.clearfix
-      = f.input :name
       = f.input :email
       = f.input :password
-      = f.input :password_confirmation, {:label => "Confirmation" }
     .actions.clearfix
-      = f.submit "Sign up", :class => 'btn primary'
+      = f.submit "Sign in", :class => 'btn primary'
+    

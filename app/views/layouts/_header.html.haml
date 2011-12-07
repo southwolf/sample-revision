@@ -1,11 +1,11 @@
 .topbar
   .topbar-inner
     .container
-      %a.brand Sample App v2
+      %a.brand{ :href => "/" } Sample App v2
       %ul.nav
         %li.active
           = link_to "Home", root_path
         %li
           = link_to "Help", help_path
         %li
-          %a Sign in
+          = link_to "Sign in", signin_path
